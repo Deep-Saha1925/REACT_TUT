@@ -15,6 +15,10 @@ function App() {
     setCounter(counter + 1)
   }
 
+  const subValue = () => {
+    setCounter(counter - 1)
+  }
+
   return (
     <>
       <h1>React</h1>
@@ -24,7 +28,9 @@ function App() {
         onClick={addValue}
       >Increase</button>
       <br />
-      <button>Decrease</button>
+      <button
+        onClick={subValue}
+      >Decrease</button>
     </>
   )
 }
