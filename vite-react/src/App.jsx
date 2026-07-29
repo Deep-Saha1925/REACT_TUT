@@ -1,6 +1,7 @@
+import Test from "./Test"
 function App() {
   return (
-    <h1>Vite Project | DEEP SAHA</h1>
+    <Test />
   )
 }
 
