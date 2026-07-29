@@ -6,14 +6,20 @@ import './App.css'
 
 function App() {
 
-  
+  let counter = 5;
+
+  const addValue = () => {
+    counter++
+  }
 
   return (
     <>
       <h1>React</h1>
-      <h3>Counter value: 5</h3>
+      <h3>Counter value: {counter}</h3>
 
-      <button>Increase</button>
+      <button
+        onClick={addValue}
+      >Increase</button>
       <br />
       <button>Decrease</button>
     </>
