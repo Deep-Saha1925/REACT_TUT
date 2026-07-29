@@ -12,11 +12,17 @@ function App() {
 
   const addValue = () => {
     // counter++
-    setCounter(counter + 1)
+    if(counter >= 22)
+      alert("Value cannot be greater than 22")
+    else
+      setCounter(counter + 1)
   }
 
   const subValue = () => {
-    setCounter(counter - 1)
+    if(counter <= 0)
+      alert("Value cannot be less than 0")
+    else
+      setCounter(counter - 1)
   }
 
   return (
