@@ -3,7 +3,7 @@ import { useState } from "react"
 
 function App() {
 
-  const [color, setColor] = useState("olive");
+  const [color, setColor] = useState("black");
 
   return (
     <div className="w-full h-screen duration-200"
@@ -13,14 +13,17 @@ function App() {
         
         <div className="flex flex-wrap justify-center gap-3 shadow-lg bg-white px-3 py-2 rounded-3xl">
           <button className="outline-none px-4 py-1 rounded-full text-white shadow-sm"
+          onClick={() => setColor("red")}
           style={{backgroundColor: "red"}}
           >Red</button>
 
           <button className="outline-none px-4 py-1 rounded-full text-white shadow-sm"
+          onClick={() => setColor("green")}
           style={{backgroundColor: "green"}}
           >Green</button>
 
           <button className="outline-none px-4 py-1 rounded-full text-white shadow-sm"
+          onClick={() => setColor("blue")}
           style={{backgroundColor: "blue"}}
           >Blue</button>
         </div>
