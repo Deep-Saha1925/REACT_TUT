@@ -15,6 +15,14 @@ function App() {
           <button className="outline-none px-4 py-1 rounded-full text-white shadow-sm"
           style={{backgroundColor: "red"}}
           >Red</button>
+
+          <button className="outline-none px-4 py-1 rounded-full text-white shadow-sm"
+          style={{backgroundColor: "green"}}
+          >Green</button>
+
+          <button className="outline-none px-4 py-1 rounded-full text-white shadow-sm"
+          style={{backgroundColor: "blue"}}
+          >Blue</button>
         </div>
       </div>
     </div>
