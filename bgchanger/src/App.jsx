@@ -1,8 +1,10 @@
+import { useState } from "react"
 
 
 function App() {
 
-  const
+  const [color, setColor] = useState("black");
+  
 
   return (
     <>
