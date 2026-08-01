@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 import './App.css'
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
     if(numberAllowed)
       str += "0123456789"
     if(charAllowed)
-      str += "~!@#$%^&*(){}[]'.,/\|:;"
+      str += "~!@#$%^&*(){}[]'.,/:;"
 
     for (let i = 1; i <= length; i++){
       let idx = Math.floor(Math.random() * str.length + 1)
