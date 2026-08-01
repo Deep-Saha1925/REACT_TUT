@@ -7,6 +7,9 @@ function App() {
   const [charAllowed, setCharAllowed] = useState(false);
   const [password, setPassword] = useState("")
 
+  // useRef hook
+  const passwordRef = useRef(null)
+
   const passwordGenerator = useCallback(() => {
     let pass = ""
     let str = "ABCDEFGHIJKLMANOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
@@ -26,6 +29,10 @@ function App() {
 
   }, [length, numberAllowed, charAllowed, setPassword]) 
 
+  const copyPassClipboard = useCallback(() => {
+    window.navigator.clipboard.writeText(password)
+  }, [password])
+
   useEffect(() => passwordGenerator
   , [length, numberAllowed, charAllowed, passwordGenerator])
 
@@ -41,9 +48,13 @@ function App() {
           className='outline-none w-full py-1 px-3'
           placeholder='Password'
           readOnly
+          ref={passwordRef}
         />
 
-        <button className='bg-blue-700 outline-none text-white px-3 py-0.7 shrink-0'>COPY</button>
+        <button className='bg-blue-700 outline-none text-white px-3 py-0.7 shrink-0'
+        
+        onClick={copyPassClipboard}
+        >COPY</button>
       </div>
 
       <div className='flex text-sm gap-x-2'>
