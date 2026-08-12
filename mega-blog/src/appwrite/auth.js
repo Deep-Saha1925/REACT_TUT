@@ -48,6 +48,13 @@ export class AuthSerive {
         return null;
     }
 
+    async logout() {
+        try {
+            return await this.account.deleteSessions();
+        } catch (error) {
+            throw error;
+        }
+    }
 }
 
 const authService = new AuthSerive();
