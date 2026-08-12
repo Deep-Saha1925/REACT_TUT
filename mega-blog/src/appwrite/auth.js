@@ -29,7 +29,14 @@ export class AuthSerive {
         }
     }
 
-    
+    async login({email, passoword}) {
+        try {
+            return await this.account.createEmailPasswordSession(email, passoword);
+        } catch (error) {
+            throw error;
+        }
+    }
+
 }
 
 const authService = new AuthSerive();
