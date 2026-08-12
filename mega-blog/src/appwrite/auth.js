@@ -14,6 +14,21 @@ export class AuthSerive {
         this.account = new Account(this.client);
     }
 
+    async createAccount({email, passoword, name}) {
+        try{
+            const userAccount = await this.account.create(ID.unique(), email, password, name);
+
+            if(userAccount){
+                // Call another method -- login
+                this.login({email, passoword});
+            }else{
+                return userAccount;
+            }
+        }catch(err){
+            throw err;
+        }
+    }
+
     
 }
 
