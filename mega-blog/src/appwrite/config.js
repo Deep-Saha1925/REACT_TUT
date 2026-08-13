@@ -51,6 +51,21 @@ export class Service {
         }
     }
 
+    async deletePost(slug){
+        try {
+            await this.databases.deleteDocument(
+                conf.appwriteDatabaseId,
+                conf.appwriteCollectiontId,
+                slug,
+            )
+
+            return true
+        } catch (error) {
+            return false
+        }
+    }
+
+   
 }
 
 const service = new Service()
