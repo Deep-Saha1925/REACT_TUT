@@ -1,9 +1,12 @@
+import { useState, useEffect } from 'react'
+import {useDispatch} from 'react-redux'
 import './App.css'
 import conf from './config/conf'
 
 function App() {
 
-  console.log(conf.appwriteUrl)
+  const [loading, setLoading] = useState(true)
+  const [dispatch, useDispatch] = useDispatch()
 
   return (
     <> 
