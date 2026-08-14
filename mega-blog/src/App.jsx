@@ -5,6 +5,7 @@ import conf from './config/conf'
 import authService from './appwrite/auth'
 import {login, logout} from './store/authSlice'
 import {Footer, Header} from './components/index'
+import { Outlet } from 'react-redux';
 
 function App() {
 
@@ -28,7 +29,7 @@ function App() {
       <div className='w-full block'>
         <Header />
         <main>
-          TODO {/* <Outlet /> */}
+          <Outlet />
         </main>
         <Footer />
       </div>
