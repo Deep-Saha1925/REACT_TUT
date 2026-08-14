@@ -4,11 +4,12 @@ import './App.css'
 import conf from './config/conf'
 import authService from './appwrite/auth'
 import {login, logout} from './store/authSlice'
+import {Footer, Header} from './components/index'
 
 function App() {
 
   const [loading, setLoading] = useState(true)
-  const [dispatch, useDispatch] = useDispatch()
+  const dispatch = useDispatch()
 
   useEffect(() => {
     authService.getCurrentUser()
@@ -23,7 +24,15 @@ function App() {
   }, [])
 
   return !loading ? (
-    <div className='min-h-screen'></div>
+    <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
+      <div className='w-full block'>
+        <Header />
+        <main>
+          TODO {/* <Outlet /> */}
+        </main>
+        <Footer />
+      </div>
+    </div>
   ) : null
 }
 
