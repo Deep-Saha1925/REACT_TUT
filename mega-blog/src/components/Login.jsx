@@ -22,6 +22,8 @@ function Login() {
                 if(userData){
                     dispatch(authLogin(userData))
                 }
+
+                navigate("/")
             }
         } catch (error) {
             setError(error.message)
