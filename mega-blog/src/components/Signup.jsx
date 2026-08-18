@@ -81,10 +81,8 @@ function Signup() {
                     </div>
                 </form>
             </div>
-
     </div>
   )
-
 }
 
 export default Signup
