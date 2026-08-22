@@ -5,6 +5,7 @@ import Logo from "./Logo"
 import Logout from "./Header/LogoutBtn"
 import RTE from "../components/RTE"
 import Signup from "../pages/Signup"
+import Login from "../pages/Login"
 
 export {
     Header,
@@ -13,5 +14,6 @@ export {
     Logo,
     Logout,
     RTE,
-    Signup
+    Signup,
+    Login
 }
