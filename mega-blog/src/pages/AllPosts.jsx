@@ -15,7 +15,11 @@ function AllPosts() {
     })
 
   return (
-    <div>AllPosts</div>
+    <div className="w-full py-8">
+        <Container>
+            
+        </Container>
+    </div>
   )
 }
 
