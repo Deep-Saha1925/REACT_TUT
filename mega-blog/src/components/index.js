@@ -8,6 +8,7 @@ import Signup from "../pages/Signup"
 import Login from "../pages/Login"
 import Post from "./Post"
 import PostForm from "./post-form/PostForm"
+import PostCard from "./PostCard"
 
 export {
     Header,
@@ -18,5 +19,7 @@ export {
     RTE,
     Signup,
     Login,
-    Post
+    Post,
+    PostForm,
+    PostCard
 }
