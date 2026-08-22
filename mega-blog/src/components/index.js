@@ -7,6 +7,7 @@ import RTE from "../components/RTE"
 import Signup from "../pages/Signup"
 import Login from "../pages/Login"
 import Post from "./Post"
+import PostForm from "./post-form/PostForm"
 
 export {
     Header,
