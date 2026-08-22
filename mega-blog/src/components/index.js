@@ -6,6 +6,7 @@ import Logout from "./Header/LogoutBtn"
 import RTE from "../components/RTE"
 import Signup from "../pages/Signup"
 import Login from "../pages/Login"
+import Post from "./Post"
 
 export {
     Header,
@@ -15,5 +16,6 @@ export {
     Logout,
     RTE,
     Signup,
-    Login
+    Login,
+    Post
 }
